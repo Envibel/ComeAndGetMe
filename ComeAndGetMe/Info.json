@@ -1,0 +1,11 @@
+{
+  "Id": "ComeAndGetMe",
+  "DisplayName": "ComeAndGetMe",
+  "Author": "Envibel",
+  "Version": "1.0.0",
+  "ManagerVersion": "0.21.3",
+  "Requirements": [],
+  "AssemblyName": "ComeAndGetMe.dll",
+  "EntryMethod": "ComeAndGetMe.Main.Load"
+}
+
