@@ -1,6 +1,6 @@
 # Come and Get Me!
 
-Adds the [Come and Get Me!](https://www.d20pfsrd.com/classes/core-classes/barbarian/rage-powers/paizo-rage-powers/come-and-get-me-ex/), rage power from tabletop. The only difference from tabletop is that it requires a strength score of 1. There was a weird issue where the prereqs would not display in game unless there were at least 2 pre reqs. **THIS MOD CREATES A SAVE DEPENDECY. YOU WILL NOT BE ABLE TO LOAD A SAVE FILE THAT HAD THIS MOD ENABLED IF YOU DISABLE IT**.
+Adds the [Come and Get Me!](https://www.d20pfsrd.com/classes/core-classes/barbarian/rage-powers/paizo-rage-powers/come-and-get-me-ex/), rage power from tabletop. **THIS MOD CREATES A SAVE DEPENDECY. YOU WILL NOT BE ABLE TO LOAD A SAVE FILE THAT HAD THIS MOD ENABLED IF YOU DISABLE IT**.
 
 
 # Installation
