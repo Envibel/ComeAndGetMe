@@ -15,6 +15,7 @@ using BlueprintCore.Utils.Types;
 using Kingmaker;
 using Kingmaker.Blueprints;
 using Kingmaker.Blueprints.Classes;
+using Kingmaker.Blueprints.Classes.Prerequisites;
 using Kingmaker.Blueprints.Facts;
 using Kingmaker.Blueprints.JsonSystem;
 using Kingmaker.EntitySystem.Stats;
@@ -71,9 +72,9 @@ namespace ComeAndGetMe.RagePowers
                     .Configure();
 
             FeatureConfigurator.New(RagePowerName, RagePowerGuid, FeatureGroup.RagePower)
-                .AddPrerequisiteClassLevel(CharacterClassRefs.BarbarianClass.ToString(), 12)
-                // A dummy pre req since the barbarian level pre req is not displayed without another pre req
-                .AddPrerequisiteStatValue(StatType.Strength, 1)
+                .AddPrerequisiteClassLevel(CharacterClassRefs.BarbarianClass.ToString(), 12, group: Prerequisite.GroupType.Any)
+                .AddPrerequisiteArchetypeLevel(ArchetypeRefs.PrimalistArchetype.ToString(), CharacterClassRefs.BloodragerClass.ToString(), level: 12, group: Prerequisite.GroupType.Any)
+                .AddPrerequisiteClassLevel(CharacterClassRefs.SkaldClass.ToString(), 12, group: Prerequisite.GroupType.Any)
                 .SetDisplayName(DisplayName)
                 .SetDescription(Description)
                 .SetIcon(Icon)
@@ -109,6 +110,16 @@ namespace ComeAndGetMe.RagePowers
                             ConditionsBuilder.New().HasFact(SwitchBuffName),
                             ifTrue: ActionsBuilder.New().ApplyBuffPermanent(EffectBuffName, isNotDispelable: true)))
                 .Configure();
+
+            // Allow inspired rage to proc Come and Get Me!
+            BuffConfigurator.For(BuffRefs.InspiredRageBuff)
+                .AddFactContextActions(
+                    activated:
+                        ActionsBuilder.New()
+                        .Conditional(
+                            ConditionsBuilder.New().HasFact(SwitchBuffName),
+                            ifTrue: ActionsBuilder.New().ApplyBuffPermanent(EffectBuffName, isNotDispelable: true)))
+    .Configure();
         }
 
         [TypeId("3D36DAB2-0A0D-473A-84E9-1C71243818CF")]
