@@ -1,6 +1,6 @@
 # Come and Get Me!
 
-Adds the [Come and Get Me!](https://www.d20pfsrd.com/classes/core-classes/barbarian/rage-powers/paizo-rage-powers/come-and-get-me-ex/), rage power from tabletop. **THIS MOD CREATES A SAVE DEPENDECY. YOU WILL NOT BE ABLE TO LOAD A SAVE FILE THAT HAD THIS MOD ENABLED IF YOU DISABLE IT**.
+Adds the [Come and Get Me!](https://www.d20pfsrd.com/classes/core-classes/barbarian/rage-powers/paizo-rage-powers/come-and-get-me-ex/), rage power from tabletop. This mod is no longer supported here. The content offered in this mod is now supported [here] (https://github.com/Envibel/MartialExcellence) **THIS MOD CREATES A SAVE DEPENDECY. YOU WILL NOT BE ABLE TO LOAD A SAVE FILE THAT HAD THIS MOD ENABLED IF YOU DISABLE IT**.
 
 
 # Installation
